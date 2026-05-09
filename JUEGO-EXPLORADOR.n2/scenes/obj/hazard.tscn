@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://vhehcbrsvujn"]
+
+[ext_resource type="Texture2D" uid="uid://dv7y42xhbauo4" path="res://assets/assets.png" id="1_0ekyd"]
+[ext_resource type="Script" uid="uid://ojyxpx67wdd8" path="res://scenes/obj/hazard.gd" id="1_qnd7g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qnd7g"]
+atlas = ExtResource("1_0ekyd")
+region = Rect2(40, 0, 32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0ekyd"]
+size = Vector2(31, 32)
+
+[node name="Hazard" type="Area2D" unique_id=1358577283]
+collision_layer = 8
+script = ExtResource("1_qnd7g")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=916428366]
+texture = SubResource("AtlasTexture_qnd7g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1067676764]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_0ekyd")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
