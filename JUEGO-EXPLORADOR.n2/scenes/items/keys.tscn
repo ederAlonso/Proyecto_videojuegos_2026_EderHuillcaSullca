@@ -1,11 +1,7 @@
 [gd_scene format=3 uid="uid://cys0fe2td14tr"]
 
 [ext_resource type="Script" uid="uid://fdtomkmrgqs4" path="res://scenes/items/keys.gd" id="1_lmwfw"]
-[ext_resource type="Texture2D" uid="uid://dv7y42xhbauo4" path="res://assets/assets.png" id="1_p8kpx"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_lmwfw"]
-atlas = ExtResource("1_p8kpx")
-region = Rect2(123.5, 0, 32.5, 32)
+[ext_resource type="Texture2D" uid="uid://wewbylyr3vjl" path="res://assets/iconos/llave.png" id="2_lmwfw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p8kpx"]
 size = Vector2(20, 26)
@@ -15,7 +11,8 @@ collision_layer = 4
 script = ExtResource("1_lmwfw")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1478589196]
-texture = SubResource("AtlasTexture_lmwfw")
+scale = Vector2(2, 2)
+texture = ExtResource("2_lmwfw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1170612915]
 shape = SubResource("RectangleShape2D_p8kpx")

@@ -2195,10 +2195,10 @@ position_smoothing_enabled = true
 position = Vector2(-945, 4)
 
 [node name="Keys" parent="." unique_id=1530191297 instance=ExtResource("8_lgrx1")]
-position = Vector2(-309, 548)
+position = Vector2(-106, 257)
 
 [node name="Door" parent="." unique_id=208659159 instance=ExtResource("9_fhpes")]
-position = Vector2(59, 539)
+position = Vector2(-16, 574)
 
 [node name="Enemy" parent="." unique_id=1792603611 instance=ExtResource("10_vmg1d")]
 position = Vector2(-713, 506)

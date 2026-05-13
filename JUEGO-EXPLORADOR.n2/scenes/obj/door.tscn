@@ -1,25 +1,22 @@
 [gd_scene format=3 uid="uid://u48nmxka7t4i"]
 
 [ext_resource type="Script" uid="uid://da4xnd3mxb1ky" path="res://scenes/obj/door.gd" id="1_8niue"]
-[ext_resource type="Texture2D" uid="uid://w8wl3uqafd12" path="res://assets/assets.png" id="2_tbc26"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_eajqf"]
-atlas = ExtResource("2_tbc26")
-region = Rect2(41.5, 0, 32, 32)
+[ext_resource type="Texture2D" uid="uid://bu45w2teos3xt" path="res://assets/iconos/puerta.png" id="2_8niue"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6axo7"]
-size = Vector2(31, 33)
+size = Vector2(34, 42)
 
 [node name="Door" type="Area2D" unique_id=208659159]
 collision_layer = 16
 script = ExtResource("1_8niue")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2054056379]
-modulate = Color(0.18492702, 0.67541504, 0.5569913, 1)
-texture = SubResource("AtlasTexture_eajqf")
+position = Vector2(-2.5, 2.499999)
+scale = Vector2(0.7, 0.659)
+texture = ExtResource("2_8niue")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1404574697]
-position = Vector2(-0.5, -0.5)
+position = Vector2(-2, 5)
 shape = SubResource("RectangleShape2D_6axo7")
 
 [node name="Label" type="Label" parent="." unique_id=1374062215]
