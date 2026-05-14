@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://u48nmxka7t4i" path="res://scenes/obj/door.tscn" id="5_sk5k4"]
 [ext_resource type="PackedScene" uid="uid://d0wcahljto4wj" path="res://scenes/enemy/enemy.tscn" id="6_sk5k4"]
 [ext_resource type="Texture2D" uid="uid://dbobevwd3wb4c" path="res://assets/background/0.png" id="10_qxy0u"]
+[ext_resource type="AudioStream" uid="uid://18sigvqx816b" path="res://sounds/Ludum Dare 30 04.ogg" id="12_iav0o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ksju7"]
 texture = ExtResource("1_ksju7")
@@ -2217,3 +2218,9 @@ position = Vector2(351, 572)
 
 [node name="Enemy5" parent="." unique_id=1612055102 instance=ExtResource("6_sk5k4")]
 position = Vector2(938, 572)
+
+[node name="musicLevel1" type="Node2D" parent="." unique_id=309208717]
+
+[node name="music" type="AudioStreamPlayer" parent="musicLevel1" unique_id=1093429920]
+stream = ExtResource("12_iav0o")
+autoplay = true

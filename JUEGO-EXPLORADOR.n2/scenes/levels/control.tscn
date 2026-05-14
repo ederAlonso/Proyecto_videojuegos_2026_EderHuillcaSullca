@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bbtkji2331hji" path="res://scenes/levels/control.gd" id="1_r1di0"]
 [ext_resource type="Texture2D" uid="uid://cfyaa1417ktnf" path="res://assets/UI/fondo de pantalla/background 1.png" id="1_xg1w7"]
+[ext_resource type="AudioStream" uid="uid://w5y072fcpow7" path="res://sounds/arcade.ogg" id="3_r1di0"]
 
 [node name="Control" type="Control" unique_id=1547779932]
 layout_mode = 3
@@ -77,6 +78,12 @@ text = "TEMPLO PERDIDO"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_trim_flags = 128
+
+[node name="music" type="Node2D" parent="." unique_id=1969747120]
+
+[node name="menuMusic" type="AudioStreamPlayer" parent="music" unique_id=1788530742]
+stream = ExtResource("3_r1di0")
+autoplay = true
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Optiones" to="." method="_on_optiones_pressed"]
