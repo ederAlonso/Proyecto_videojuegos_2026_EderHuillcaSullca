@@ -54,5 +54,5 @@ func handle_direction(dir: float):
 		animacion.flip_h = dir < 0.0
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body.name == "Player":
-		body.die()
+	if body.is_in_group("Player"):
+		body.recibir_daño()

@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://u48nmxka7t4i" path="res://scenes/obj/door.tscn" id="9_gw1l3"]
 [ext_resource type="PackedScene" uid="uid://d0wcahljto4wj" path="res://scenes/enemy/enemy.tscn" id="10_p4se4"]
 [ext_resource type="AudioStream" uid="uid://18sigvqx816b" path="res://sounds/Ludum Dare 30 04.ogg" id="12_brxtv"]
+[ext_resource type="Texture2D" uid="uid://cqye4cnr117g2" path="res://assets/iconos/heart pixel art 48x48.png" id="13_tv7cl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ksju7"]
 texture = ExtResource("2_nt80m")
@@ -2213,3 +2214,32 @@ position = Vector2(-483, 336)
 [node name="music2" type="AudioStreamPlayer" parent="musicLevel2" unique_id=905026398]
 stream = ExtResource("12_brxtv")
 autoplay = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=622467910]
+
+[node name="life" type="Control" parent="CanvasLayer" unique_id=2102167719]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="corazon" type="TextureRect" parent="CanvasLayer/life" unique_id=455340839]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("13_tv7cl")
+
+[node name="corazon2" type="TextureRect" parent="CanvasLayer/life" unique_id=750092974]
+layout_mode = 0
+offset_left = 46.0
+offset_top = -1.0
+offset_right = 94.0
+offset_bottom = 47.0
+texture = ExtResource("13_tv7cl")
+
+[node name="corazon3" type="TextureRect" parent="CanvasLayer/life" unique_id=809406849]
+layout_mode = 0
+offset_left = 89.0
+offset_right = 137.0
+offset_bottom = 48.0
+texture = ExtResource("13_tv7cl")

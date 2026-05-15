@@ -1,11 +1,26 @@
 extends CharacterBody2D
 @onready var animacion := $Anim
+@onready var corazon = $"../CanvasLayer/life/corazon"
+@onready var corazon2 = $"../CanvasLayer/life/corazon2"
+@onready var corazon3 = $"../CanvasLayer/life/corazon3"
+
 enum State { IDLE, RUN, JUMP, ATTACK, DEAD }
 var state = State.IDLE
 var speed = 100
 var jump_force = -400
 var gravity = 900
 var has_key = false
+
+var vidas = 3
+var invulnerable = false
+
+func actualizar_vidas():
+	corazon.visible = vidas >= 1
+	corazon2.visible = vidas >= 2
+	corazon3.visible = vidas >= 3
+	
+func _ready() -> void:
+	add_to_group("Player")
 
 func _physics_process(delta):
 	match state:
@@ -72,5 +87,21 @@ func handle_direction(dir: float):
 func _reset_levels():
 	get_tree().reload_current_scene()
 
-func _on_ready() -> void:
-	add_to_group("Player")
+func recibir_daño():
+	if invulnerable or state == State.DEAD:
+		return
+
+	vidas -= 1
+	actualizar_vidas()
+
+	if vidas <= 0:
+		die()
+	else:
+		invulnerable = true
+		await get_tree().create_timer(1.0).timeout
+		invulnerable = false
+
+
+
+	
+	
