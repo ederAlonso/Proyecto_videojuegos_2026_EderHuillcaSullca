@@ -2190,11 +2190,15 @@ tile_set = SubResource("TileSet_6iamk")
 position = Vector2(-836, 476)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=375399140]
-zoom = Vector2(0.785, 0.785)
+zoom = Vector2(1.15, 1.15)
+limit_left = -1040
+limit_top = 75
+limit_right = 150
+limit_bottom = 640
 position_smoothing_enabled = true
 
 [node name="KillZone" parent="." unique_id=90197598 instance=ExtResource("7_josfm")]
-position = Vector2(-945, 4)
+position = Vector2(-927, -27)
 
 [node name="Keys" parent="." unique_id=1530191297 instance=ExtResource("8_lgrx1")]
 position = Vector2(-106, 257)
