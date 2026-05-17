@@ -2173,6 +2173,7 @@ script = ExtResource("1_excbq")
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=1419576551]
 repeat_size = Vector2(586, 0)
+autoscroll = Vector2(20, 0)
 repeat_times = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=1347866498]
