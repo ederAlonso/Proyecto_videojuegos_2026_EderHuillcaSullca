@@ -14,6 +14,7 @@
 [ext_resource type="AudioStream" uid="uid://18sigvqx816b" path="res://sounds/Ludum Dare 30 04.ogg" id="12_iav0o"]
 [ext_resource type="Texture2D" uid="uid://cqye4cnr117g2" path="res://assets/iconos/heart pixel art 48x48.png" id="13_dnkej"]
 [ext_resource type="PackedScene" uid="uid://clu1bnh2v5f8g" path="res://scenes/enemy/mostruo.tscn" id="14_wtwp4"]
+[ext_resource type="PackedScene" uid="uid://bopb1y041o613" path="res://scenes/enemy/magic.tscn" id="15_iwr0g"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ksju7"]
 texture = ExtResource("1_ksju7")
@@ -2211,10 +2212,10 @@ position = Vector2(510, 499)
 position = Vector2(1144, 430)
 
 [node name="Enemy" parent="." unique_id=1792603611 instance=ExtResource("6_sk5k4")]
-position = Vector2(-713, 506)
+position = Vector2(-742, 160)
 
 [node name="Enemy2" parent="." unique_id=913266098 instance=ExtResource("6_sk5k4")]
-position = Vector2(-677, 396)
+position = Vector2(-676, 400)
 
 [node name="Enemy3" parent="." unique_id=1423690220 instance=ExtResource("6_sk5k4")]
 position = Vector2(-219, 337)
@@ -2263,3 +2264,6 @@ texture = ExtResource("13_dnkej")
 
 [node name="mostruo" parent="." unique_id=878864394 instance=ExtResource("14_wtwp4")]
 position = Vector2(-216, 570)
+
+[node name="magic" parent="." unique_id=1432754142 instance=ExtResource("15_iwr0g")]
+position = Vector2(-760, 589)
