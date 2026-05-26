@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://dbobevwd3wb4c" path="res://assets/background/0.png" id="10_qxy0u"]
 [ext_resource type="AudioStream" uid="uid://18sigvqx816b" path="res://sounds/Ludum Dare 30 04.ogg" id="12_iav0o"]
 [ext_resource type="Texture2D" uid="uid://cqye4cnr117g2" path="res://assets/iconos/heart pixel art 48x48.png" id="13_dnkej"]
+[ext_resource type="PackedScene" uid="uid://clu1bnh2v5f8g" path="res://scenes/enemy/mostruo.tscn" id="14_wtwp4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ksju7"]
 texture = ExtResource("1_ksju7")
@@ -2201,7 +2202,7 @@ drag_horizontal_enabled = true
 drag_vertical_enabled = true
 
 [node name="KillZone" parent="." unique_id=90197598 instance=ExtResource("3_nsrm0")]
-position = Vector2(-466, -12)
+position = Vector2(-487, -9)
 
 [node name="Keys" parent="." unique_id=1530191297 instance=ExtResource("4_6761a")]
 position = Vector2(510, 499)
@@ -2219,7 +2220,7 @@ position = Vector2(-677, 396)
 position = Vector2(-219, 337)
 
 [node name="Enemy4" parent="." unique_id=572798044 instance=ExtResource("6_sk5k4")]
-position = Vector2(351, 572)
+position = Vector2(259, 569)
 
 [node name="Enemy5" parent="." unique_id=1612055102 instance=ExtResource("6_sk5k4")]
 position = Vector2(938, 572)
@@ -2259,3 +2260,6 @@ offset_top = 1.0
 offset_right = 133.0
 offset_bottom = 41.0
 texture = ExtResource("13_dnkej")
+
+[node name="mostruo" parent="." unique_id=878864394 instance=ExtResource("14_wtwp4")]
+position = Vector2(-216, 570)
