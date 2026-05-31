@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://djy6qexnnqyjl"]
 
-[ext_resource type="Texture2D" uid="uid://cfyaa1417ktnf" path="res://assets/UI/fondo de pantalla/background 1.png" id="1_g54pf"]
 [ext_resource type="Script" uid="uid://8hubrnftllcj" path="res://scenes/levels/niveles_control.gd" id="1_pp2bw"]
+[ext_resource type="Texture2D" uid="uid://gvy1elc2a38m" path="res://assets/UI/fondo de pantalla/escenaInicial.png" id="2_eiauy"]
 [ext_resource type="AudioStream" uid="uid://w5y072fcpow7" path="res://sounds/arcade.ogg" id="3_eiauy"]
 
 [node name="NivelesControl" type="Control" unique_id=620298318]
@@ -9,8 +9,6 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -557.0
-offset_bottom = -320.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_pp2bw")
@@ -20,14 +18,21 @@ layout_mode = 1
 offset_right = 576.0
 offset_bottom = 324.0
 scale = Vector2(2, 2)
-texture = ExtResource("1_g54pf")
+texture = ExtResource("2_eiauy")
+expand_mode = 1
 stretch_mode = 6
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=212754310]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -56.0
+offset_top = -154.0
+offset_right = 5.0
+offset_bottom = -6.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.94, 1.94)
@@ -35,8 +40,9 @@ scale = Vector2(1.94, 1.94)
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1963306498]
 layout_mode = 2
 size_flags_horizontal = 4
-size_flags_stretch_ratio = 0.82
-theme_override_constants/separation = 16
+size_flags_vertical = 4
+size_flags_stretch_ratio = 1.02
+theme_override_constants/separation = 8
 alignment = 1
 
 [node name="nivel 1" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1150191382]
