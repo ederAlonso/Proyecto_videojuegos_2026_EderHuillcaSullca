@@ -50,7 +50,7 @@ text = "Jugar"
 [node name="Optiones" type="Button" parent="MarginContainer/VBoxContainer" unique_id=302288496]
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
-text = "Opciones"
+text = "Niveles"
 
 [node name="Exit" type="Button" parent="MarginContainer/VBoxContainer" unique_id=901787761]
 layout_mode = 2

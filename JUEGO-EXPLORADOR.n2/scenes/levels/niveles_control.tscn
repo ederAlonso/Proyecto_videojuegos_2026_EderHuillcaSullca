@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://djy6qexnnqyjl"]
+
+[ext_resource type="Texture2D" uid="uid://cfyaa1417ktnf" path="res://assets/UI/fondo de pantalla/background 1.png" id="1_g54pf"]
+[ext_resource type="Script" uid="uid://8hubrnftllcj" path="res://scenes/levels/niveles_control.gd" id="1_pp2bw"]
+[ext_resource type="AudioStream" uid="uid://w5y072fcpow7" path="res://sounds/arcade.ogg" id="3_eiauy"]
+
+[node name="NivelesControl" type="Control" unique_id=620298318]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -557.0
+offset_bottom = -320.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pp2bw")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1137122285]
+layout_mode = 1
+offset_right = 576.0
+offset_bottom = 324.0
+scale = Vector2(2, 2)
+texture = ExtResource("1_g54pf")
+stretch_mode = 6
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=212754310]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.94, 1.94)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1963306498]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_stretch_ratio = 0.82
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="nivel 1" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1150191382]
+layout_mode = 2
+text = "Nivel 1"
+
+[node name="nivel 2" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1590116306]
+layout_mode = 2
+text = "Nivel 2"
+
+[node name="nivel 3" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1093237139]
+layout_mode = 2
+text = "Nivel 3"
+
+[node name="volver" type="Button" parent="MarginContainer/VBoxContainer" unique_id=44521500]
+layout_mode = 2
+text = "Volver"
+
+[node name="music" type="Node2D" parent="." unique_id=1521535286]
+
+[node name="sonidoCN" type="AudioStreamPlayer" parent="music" unique_id=138182917]
+stream = ExtResource("3_eiauy")
+autoplay = true
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/nivel 1" to="." method="_on_nivel_1_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/nivel 2" to="." method="_on_nivel_2_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/nivel 3" to="." method="_on_nivel_3_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/volver" to="." method="_on_volver_pressed"]

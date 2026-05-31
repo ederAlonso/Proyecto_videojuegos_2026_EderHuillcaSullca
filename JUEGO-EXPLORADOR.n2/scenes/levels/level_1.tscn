@@ -2266,4 +2266,4 @@ texture = ExtResource("13_dnkej")
 position = Vector2(-216, 570)
 
 [node name="magic" parent="." unique_id=1432754142 instance=ExtResource("15_iwr0g")]
-position = Vector2(-760, 589)
+position = Vector2(-760, 583)
